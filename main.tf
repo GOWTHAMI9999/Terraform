@@ -24,7 +24,7 @@ resource "aws_security_group" "allow_ssh" {
 # EC2 Instance
 resource "aws_instance" "example" {
   ami           = "ami-0198cdf7458a7a932"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   key_name        = "saikey"
   security_groups = [aws_security_group.allow_ssh.name]
